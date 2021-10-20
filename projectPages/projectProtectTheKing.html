@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Basic Page Needs
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta charset="utf-8">
+<title>Protect The King</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Mobile Specific Metas
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- FONT
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+<!-- CSS
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="stylesheet" href="../Skeleton-2.0.4/css/normalize.css">
+<link rel="stylesheet" href="../Skeleton-2.0.4/css/skeleton.css">
+<link rel="stylesheet" href="../Skeleton-2.0.4/css/navbar.css">
+
+<!-- Favicon
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+<body style="background: wheat;"> <!-- making bg white for editing -->
+
+</head>
+<body>
+
+  <style>
+    .centered {
+      text-align: center;
+    }
+
+    .link-flexbox {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    .link-flexbox h5 {
+      flex-basis: 0;
+      flex-grow: 1;
+      display: inline;
+      margin: 8px 2px 8px 2px;
+      min-width: 220px;
+    }
+
+    .separator {
+      flex-grow: 100;
+    }
+
+  </style>
+  
+
+
+  <div class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <div class="navbar-section"><div class="navbar-title">Jonathan Poholarz</div></div>
+        <div class="navbar-separator"></div>
+        <div class="navbar-section">
+          <div class="navbar-link"><a href="../home.html">Home</a></div>
+          <div class="navbar-link"><a href="../experience.html">Experience</a></div>
+          <div class="navbar-link"><a href="../portfolio.html">Portfolio</a></div>
+          <div class="navbar-link"><a href="../Skeleton-2.0.4/images/Resume/CS Resume 190629.pdf">Resume</a></div>
+          
+          <div class="navbar-link icons">
+            <div style="display: inline;">
+              <a href="https://github.com/jmpoholarz">
+                <img src="../Skeleton-2.0.4/images/icons/github_white_256.png" alt="Github" width="48
+                "></a>
+            </div>
+            <div style="display: inline;">
+              <a href="https://www.linkedin.com/in/jonathan-poholarz-427b7686/">
+                <img src="../Skeleton-2.0.4/images/icons/linkedin_white.png" alt="LinkedIn" width="48"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <img src="../Skeleton-2.0.4/images/Projects/MizJamWip3.gif" style="margin-left: auto; margin-right: auto; display: block; max-width: 100%; margin-bottom: 16px; box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.5);">
+      
+      <h2 class="centered">Protect The King</h2>
+      <h4 class="centered">Summer 2020</h4>
+      <div class="link-flexbox centered">
+        <h5><a href="https://canisborealis.itch.io/protect-the-king">Play in Browser Now!</a></h5>
+        <h5><a href="https://itch.io/jam/miz-jam-1">Learn about MizJam1</a></h5>
+      </div>
+      <p>Around August of 2020, I heard about a game jam, a competition to make a video game in a set time period with given restrictions.  Generally, there is a strict time limit to create something pertaining to a given theme.  Specifically for Miz Jam 1, users were to create an engaging and creative game using a <a href="https://kenney.nl/assets/bit-pack">specific 1 bit graphic pack by Kenney</a>.</p>
+      <img style="margin-left: auto; margin-right: auto; display: block; max-width: 100%;" src="../Skeleton-2.0.4/images/Projects/mizjamKenneySnippit.png">
+      <p>Because the jam's time frame was rather generous, up to 48 hours over the course of a week, I was delighted to participate.  I thought over various ideas before finally settling on a turn-based chess idea where the player would, as the name suggests, protect their king from an army of incoming pieces.</p>
+      <p>I spent a lot of my time working on the enemy piece AI since basically all of the game would revolve around this.  The AI will rank each of its possible moves based on a scoring system.  If the move allows it to take valuable pieces from the player, that move earns points.  If a move would put the AI's pieces in danger, that move loses points.</p>
+      <p>By the end of my 32 used hours, I was pretty happy with the AI's performance.  Pretty easily it will take the player's pieces if they're not careful about them.  I, of course, could have added more UI warnings for this, but there was only so much I could get done before the deadline.  Many features had to be cut!</p>
+      <p>Unfortunately, I missed the upload cutoff due to an unfortunate oversight on my end (forgetting to select the main Godot scene to run before exporting the playable file!), but I had a great time and look to do more of these sorts of projects in the future.  They're great for creativity and getting more familiar with some of the trickier UI design tasks in my engine of choice!</p>
+      <div class="centered"><iframe src="https://itch.io/embed/738606" width="552" height="167" frameborder="0"><a href="https://canisborealis.itch.io/protect-the-king">Protect the King by CanisBorealis</a></iframe></div>
+    </div>
+  </div>
+
+  
+  
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+<footer>
+  <div class="container">
+    <div class="row">
+      <p>©2021 by Jonathan Poholarz - Contact me at <a href="mailto:jmpoholarz@gmail.com">jmpoholarz@gmail.com</a> - Last updated -insert date-.</p>
+    </div>
+  </div>
+</footer>
+</html>

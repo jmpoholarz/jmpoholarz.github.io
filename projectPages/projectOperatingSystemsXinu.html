@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Basic Page Needs
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta charset="utf-8">
+<title>Xinu Projects</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Mobile Specific Metas
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- FONT
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+<!-- CSS
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="stylesheet" href="../Skeleton-2.0.4/css/normalize.css">
+<link rel="stylesheet" href="../Skeleton-2.0.4/css/skeleton.css">
+<link rel="stylesheet" href="../Skeleton-2.0.4/css/navbar.css">
+
+<!-- Favicon
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+<body style="background: wheat;"> <!-- making bg white for editing -->
+
+</head>
+<body>
+
+  <style>
+    .centered {
+      text-align: center;
+    }
+
+    .link-flexbox {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    .link-flexbox h5 {
+      flex-basis: 0;
+      flex-grow: 1;
+      display: inline;
+      margin: 8px 2px 8px 2px;
+      min-width: 220px;
+    }
+
+    .separator {
+      flex-grow: 100;
+    }
+
+  </style>
+  
+
+
+  <div class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <div class="navbar-section"><div class="navbar-title">Jonathan Poholarz</div></div>
+        <div class="navbar-separator"></div>
+        <div class="navbar-section">
+          <div class="navbar-link"><a href="../home.html">Home</a></div>
+          <div class="navbar-link"><a href="../experience.html">Experience</a></div>
+          <div class="navbar-link"><a href="../portfolio.html">Portfolio</a></div>
+          <div class="navbar-link"><a href="../Skeleton-2.0.4/images/Resume/CS Resume 190629.pdf">Resume</a></div>
+          
+          <div class="navbar-link icons">
+            <div style="display: inline;">
+              <a href="https://github.com/jmpoholarz">
+                <img src="../Skeleton-2.0.4/images/icons/github_white_256.png" alt="Github" width="48
+                "></a>
+            </div>
+            <div style="display: inline;">
+              <a href="https://www.linkedin.com/in/jonathan-poholarz-427b7686/">
+                <img src="../Skeleton-2.0.4/images/icons/linkedin_white.png" alt="LinkedIn" width="48"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <img src="../Skeleton-2.0.4/images/Projects/xinu.png" 
+      style="margin-left: auto; margin-right: auto; display: block; 
+      max-width: 100%; margin-bottom: 16px; box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.5);">
+      
+      <h2 class="centered">Operatings Systems Course Projects</h2>
+      <h4 class="centered">Spring 2018</h4>
+
+      <p>Throughout my Operating Systems course at Purdue, I had the opportunity to learn about and implement various system designs with the help of the stripped down Xinu OS.  Due to Xinu's straight-forward and simple implementation, it becomes much easier to tinker with the moving parts that make up an OS one by one and learn how they really work.</p>
+      <p>Some of the projects I worked on:
+        <ul>
+          <li>Memory stack analysis and process allocation</li>
+          <li>Round robin scheduling with dynamic process priorities</li>
+          <li>UNIX Solaris-style Time Share process scheduling</li>
+          <li>Inter-process communication via message passing</li>
+          <li>Callback functions</li>
+          <li>Timers, process termination, and process communication via signals</li>
+          <li>Garbage collection with a managed list of allocated blocks</li>
+        </ul>
+      </p>
+     
+      <p>To learn more about XINU, visit <a href="https://xinu.cs.purdue.edu/">https://xinu.cs.purdue.edu/</a>and <a href="https://github.com/xinu-os/xinu">https://github.com/xinu-os/xinu</a></p>
+    </div>
+  </div>
+
+  
+  
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+<footer>
+  <div class="container">
+    <div class="row">
+      <p>©2021 by Jonathan Poholarz - Contact me at <a href="mailto:jmpoholarz@gmail.com">jmpoholarz@gmail.com</a> - Last updated -insert date-.</p>
+    </div>
+  </div>
+</footer>
+</html>

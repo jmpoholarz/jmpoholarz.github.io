@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Basic Page Needs
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta charset="utf-8">
+<title>Memoji</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Mobile Specific Metas
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- FONT
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+<!-- CSS
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="stylesheet" href="../Skeleton-2.0.4/css/normalize.css">
+<link rel="stylesheet" href="../Skeleton-2.0.4/css/skeleton.css">
+<link rel="stylesheet" href="../Skeleton-2.0.4/css/navbar.css">
+
+<!-- Favicon
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+<body style="background: wheat;"> <!-- making bg white for editing -->
+
+</head>
+<body>
+
+  <style>
+    .centered {
+      text-align: center;
+    }
+
+    .link-flexbox {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    .link-flexbox h5 {
+      flex-basis: 0;
+      flex-grow: 1;
+      display: inline;
+      margin: 8px 2px 8px 2px;
+      min-width: 220px;
+    }
+
+    .separator {
+      flex-grow: 100;
+    }
+
+  </style>
+  
+
+
+  <div class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <div class="navbar-section"><div class="navbar-title">Jonathan Poholarz</div></div>
+        <div class="navbar-separator"></div>
+        <div class="navbar-section">
+          <div class="navbar-link"><a href="../home.html">Home</a></div>
+          <div class="navbar-link"><a href="../experience.html">Experience</a></div>
+          <div class="navbar-link"><a href="../portfolio.html">Portfolio</a></div>
+          <div class="navbar-link"><a href="../Skeleton-2.0.4/images/Resume/CS Resume 190629.pdf">Resume</a></div>
+          
+          <div class="navbar-link icons">
+            <div style="display: inline;">
+              <a href="https://github.com/jmpoholarz">
+                <img src="../Skeleton-2.0.4/images/icons/github_white_256.png" alt="Github" width="48
+                "></a>
+            </div>
+            <div style="display: inline;">
+              <a href="https://www.linkedin.com/in/jonathan-poholarz-427b7686/">
+                <img src="../Skeleton-2.0.4/images/icons/linkedin_white.png" alt="LinkedIn" width="48"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <img src="../Skeleton-2.0.4/images/Projects/Memoji.png" 
+      style="margin-left: auto; margin-right: auto; display: block; max-width: 100%; 
+      margin-bottom: 16px; box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.5);">
+      
+      <h2 class="centered">Memoji</h2>
+      <h4 class="centered">Spring 2019</h4>
+      <div class="link-flexbox centered">
+        <h5><a href="https://github.com/jmpoholarz/Memoji">Check it out on Github!</a></h5>
+      </div>
+      <p>Highly inspired by the Jackbox(tm) Party Pack games, Jonathan Poholarz, Maxwell Jones, Manoj Polisetti, Andrew Ring, and Delun Shi make up the team that brings you Memoji.</p>
+      <p>A clever word mash up of 'Meme' and 'Emoji', in Memoji you face off against your friends (or enemies) to create the best answer to a series of comedic prompts.  What counts as best?  That's up to you as you vote for the best answers in each round.  But here's the catch: all of your answers can only be represented using emojis!</p>
+      <p>Compatible with Windows, Mac, Linux, Android, and iOS, Memoji has been designed to work cross-platform with as little hassle as possible.  Creating a game from a computer is simple and easy utilizing a short 4-letter code system.  Simply connect to a lobby with your device and code and enjoy the Emojis!</p>
+      <hr>
+      <p>Memoji has been our Senior Software Design Group Project as we graduate from Purdue University.  We set out to build an engaging family game experience using the knowledge we have learned in our educations.</p>
+      <p>The system is divided into three intercommunicating parts: the Host, the Server, and the Players.  Each game session is run by a Host instance on a user's computer.  After registering the session with our Amazon Cloud hosted Server, Player instances can connect to the Host.  Once enough Players have joined, the Host can begin a game session after which messages are passed back and forth from the Host to the Server to the Players and in reverse from Players to Server to Host.</p>
+      <p>Front-end and game logic were implemented in the up-and-coming Godot Game Engine 3.0.6 - the 3rd fastest growing open source project on Github at the time of writing this.  Godot provided us with useful user interface components such as buttons and scrollbars which we used to build our game screens.  It also takes care of the low level tasks such as memory management and window rendering which makes cross-platform execution easier for us.  Our back-end Server ran on NodeJS code on an Amazon Web Services instance.</p>
+      <p>As the relative Godot expert in our team on this project, I was our Scrum Master throughout the semester and directed a lot of the tasks that needed to be completed as well as picked up stories where needed.  In particular, I wrote our client-side networking code and created the prompt answering screens that generate dynamically based on the emojis in the configuration files.</p>
+      <p>Most of our project went well, but we ran into a few problems throughout the semester.  For example, a bug in the Networking code for Godot 3.0.6 (fixed in 3.1) made some of our networking difficult.  Although we worked around it, it would probably be smart to rewrite our networking before releasing the actual product.  Similarly, the server code could use another pass or few to be cleaned up and made more reliable.  In the same vein, the core gameplay logic became jumbled as the semester progressed due to miscommunications among team members implementing the same systems.  This has left a lot of unused code that could definitely be deleted.  And lastly, we were never really satisfied with the resulting user interface color scheme.  It could definitely be overhauled to look better.</p>
+      <p>For those reasons, there are currently no plans to release the project as a purchasable product, but, if the stars align, maybe Memoji will make a return, newly designed and packed full of emojis.</p>
+    </div>
+  </div>
+
+  
+  
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+<footer>
+  <div class="container">
+    <div class="row">
+      <p>©2021 by Jonathan Poholarz - Contact me at <a href="mailto:jmpoholarz@gmail.com">jmpoholarz@gmail.com</a> - Last updated -insert date-.</p>
+    </div>
+  </div>
+</footer>
+</html>

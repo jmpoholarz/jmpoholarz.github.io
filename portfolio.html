@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Basic Page Needs
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta charset="utf-8">
+<title>Portfolio</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Mobile Specific Metas
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- FONT
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+<!-- CSS
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="stylesheet" href="Skeleton-2.0.4/css/normalize.css">
+<link rel="stylesheet" href="Skeleton-2.0.4/css/skeleton.css">
+<link rel="stylesheet" href="Skeleton-2.0.4/css/navbar.css">
+
+<!-- Favicon
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+<!-- <body style="background: #fff;"> <!-- making bg white for editing -->
+
+  <body style="background: wheat;">
+
+</head>
+<body>
+
+  <style>
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: auto;
+      background-color:darkgoldenrod;
+      box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.5);
+      margin-bottom: 32px;
+    }
+
+    .portfolio-row {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .portfolio-panel {
+      position: relative;
+      display: inline;
+      margin: 4px;
+      flex-grow: 1;
+    }
+    .portfolio-panel img {
+      /* fix not scaling properly in firefox */
+      max-width:100%; 
+      width:100%;
+    }
+    .portfolio-panel:hover img {
+      opacity: 30%;
+    }
+    .portfolio-panel:hover .portfolio-panel-info {
+      visibility: visible;
+    }
+
+    .portfolio-panel-info {
+      visibility: hidden;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      text-align: center;
+      transform: translate(0%, -50%); 
+    }
+    .portfolio-panel-info h2 {
+      font-size: 48px; 
+      color: white;
+    }
+    .portfolio-panel-info p {
+      font-size: 22px;
+      font-style: italic;
+      color: white;
+    }
+    
+    
+
+
+    @media (min-width: 550px) {
+      .portfolio-panel-info h2 {
+        font-size: 54px; 
+      }
+      .portfolio-panel-info p {
+        font-size: 24px;
+      }
+    }
+
+    @media screen and (min-width: 750px) {
+      .portfolio-row {
+        flex-wrap: nowrap;
+      }
+      .portfolio-panel-info h2 {
+        font-size: 36px; 
+        margin-bottom: 2px;
+      }
+      .portfolio-panel-info p {
+        font-size: 18px;
+      }
+    }
+    @media screen and (min-width: 1000px) {
+      .portfolio-row {
+        flex-wrap: nowrap;
+      }
+      .portfolio-panel-info h2 {
+        font-size: 54px; 
+        margin-bottom: 1rem;
+      }
+      .portfolio-panel-info p {
+        font-size: 24px;
+      }
+    }
+
+  </style>
+  
+
+
+  <div class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <div class="navbar-section"><div class="navbar-title">Jonathan Poholarz</div></div>
+        <div class="navbar-separator"></div>
+        <div class="navbar-section">
+          <div class="navbar-link"><a href="home.html">Home</a></div>
+          <div class="navbar-link"><a href="experience.html">Experience</a></div>
+          <div class="navbar-link active"><a href="portfolio.html">Portfolio</a></div>
+          <div class="navbar-link"><a href="Skeleton-2.0.4/images/Resume/CS Resume 190629.pdf">Resume</a></div>
+          
+          <div class="navbar-link icons">
+            <div style="display: inline;">
+              <a href="https://github.com/jmpoholarz">
+                <img src="Skeleton-2.0.4/images/icons/github_white_256.png" alt="Github" width="48
+                "></a>
+            </div>
+            <div style="display: inline;">
+              <a href="https://www.linkedin.com/in/jonathan-poholarz-427b7686/">
+                <img src="Skeleton-2.0.4/images/icons/linkedin_white.png" alt="LinkedIn" width="48"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    
+
+      <h1 style="text-align: center; 
+        color: #372206;">Project Showcase</h1>
+
+      <div class="portfolio-grid">
+
+        <div class="portfolio-row">
+          <div class="portfolio-panel">
+            <a href="">
+              <img src="Skeleton-2.0.4/images/Projects/HBRandoDev1e.gif">
+              <div class="portfolio-panel-info">
+                <h2>Frogger: He's Back Randomizer</h2>
+                <p>Scripted Map Randomizer of the 1997 PC/PSX Video Game</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-row">
+          <div class="portfolio-panel">
+            <a href="projectPages/projectPersonalWebsite.html">
+              <img src="Skeleton-2.0.4/images/Projects/PersonalSite.png">
+              <div class="portfolio-panel-info">
+                <h2>Personal Website</h2>
+                <p>Updated Personal Site in Html/Css</p>
+              </div>
+            </a>
+          </div>
+          <div class="portfolio-panel">
+            <a href="projectPages/projectHelloBot.html">
+              <img src="Skeleton-2.0.4\images\Projects\helloBot75per.png">
+              <div class="portfolio-panel-info">
+                <h2>Telegram Hello Bot</h2>
+                <p>Personal Project in Python with Heroku</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-row">
+          <div class="portfolio-panel">
+            <a href="projectPages/projectProtectTheKing.html">
+              <img src="Skeleton-2.0.4/images/Projects/MizJamWip3.gif">
+              <div class="portfolio-panel-info">
+                <h2>Protect The King</h2>
+                <p>48 Hour Game Jam Entry with Godot</p>
+              </div>
+            </a>
+          </div>
+          <div class="portfolio-panel">
+            <a href="projectPages/projectSphereApproximations.html">
+              <img src="Skeleton-2.0.4/images/Projects/PolyhedronWipG.gif">
+              <div class="portfolio-panel-info">
+                <h2>Sphere Approxmiations</h2>
+                <p>Rendering Experiments with Godot</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="portfolio-row">
+          <div class="portfolio-panel">
+            <a href="projectPages/projectMemoji.html">
+              <img src="Skeleton-2.0.4/images/Projects/Memoji.png">
+              <div class="portfolio-panel-info">
+                <h2>Memoji</h2>
+                <p>Software Engineering Senior Group Project</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="portfolio-row">
+          <div class="portfolio-panel">
+            <a href="projectPages/projectCreditCardAnalysis.html">
+              <img src="Skeleton-2.0.4/images/Projects/InfographicThumb1point5x.png">
+              <div class="portfolio-panel-info">
+                <h2>Credit Card Transaction Analysis</h2>
+                <p>Machine Learning Class Group Project</p>
+              </div>
+            </a>
+          </div>
+          <div class="portfolio-panel">
+            <a href="projectPages/projectGodotAsteroids.html">
+              <img src="Skeleton-2.0.4/images/Projects/AsteroidsGif.gif">
+              <div class="portfolio-panel-info">
+                <h2>Asteroids</h2>
+                <p>A Personal Project with Godot</p>
+              </div>
+            </a>
+          </div>
+        </div>
+  
+        <div class="portfolio-row">
+          <div class="portfolio-panel">
+            <a href="projectPages/projectOperatingSystemsXinu.html">
+              <img src="Skeleton-2.0.4/images/Projects/xinu.png">
+              <div class="portfolio-panel-info">
+                <h2>Xinu Projects</h2>
+                <p>Operating Systems Course Projects</p>
+              </div>
+            </a>
+          </div>
+          <div class="portfolio-panel">
+            <a href="projectPages/projectWaves.html">
+              <img src="Skeleton-2.0.4/images/Projects/WavesGif3b.gif">
+              <div class="portfolio-panel-info">
+                <h2>Waves</h2>
+                <p>A Personal Project in C++ with SDL</p>
+              </div>
+            </a>
+          </div>
+        </div>
+  
+        <div class="portfolio-row">
+          <div class="portfolio-panel">
+            <a href="projectPages/projectMemedemic.html">
+              <img src="Skeleton-2.0.4/images/Projects/Memedemic 3.png">
+              <div class="portfolio-panel-info">
+                <h2>Memedemic</h2>
+                <p>Software Testing Group Project</p>
+              </div>
+            </a>
+          </div>
+          <div class="portfolio-panel">
+            <a href="projectPages/projectUpgrade.html">
+              <img src="Skeleton-2.0.4/images/Projects/Upgrade compilation.png">
+              <div class="portfolio-panel-info">
+                <h2>upgrade</h2>
+                <p>Software Engineering I Group Project</p>
+              </div>
+            </a>
+          </div>
+        </div>
+  
+        <div class="portfolio-row">
+          <div class="portfolio-panel">
+            <a href="projectPages/projectMyShell.html">
+              <img src="Skeleton-2.0.4/images/Projects/cs252shell.png">
+              <div class="portfolio-panel-info">
+                <h2>myshell</h2>
+                <p>Systems Programming Semester Project</p>
+              </div>
+            </a>
+          </div>
+          <div class="portfolio-panel">
+            <a href="projectPages/projectDataStructuresAndAlgorithms.html">
+              <img src="Skeleton-2.0.4/images/Projects/cs251.png">
+              <div class="portfolio-panel-info">
+                <h2>Data Structures & Algorithms</h2>
+                <p>Various assignments and projects covered in my Data Structures and Algorithms class</p>
+              </div>
+            </a>
+          </div>
+        </div>
+  
+        <div class="portfolio-row">
+          <div class="portfolio-panel">
+            <a href="projectPages/projectCalculator.html">
+              <img src="Skeleton-2.0.4/images/Projects/CS180 Calculator.png">
+              <div class="portfolio-panel-info">
+                <h2>Four Function Calculator</h2>
+                <p>Intro Java Programming Final Project</p>
+              </div>
+            </a>
+          </div>
+          <div class="portfolio-panel">
+            <a href="projectPages/projectLetItRain.html">
+              <img src="Skeleton-2.0.4/images/Projects/LetItRain.png">
+              <div class="portfolio-panel-info">
+                <h2>Let It Rain<br>Match 3</h2>
+                <p>First Programming Project in Python 3</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+
+
+  </div>
+
+  
+  
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+<footer>
+  <div class="container">
+    <div class="row">
+      <p>©2021 by Jonathan Poholarz - Contact me at <a href="mailto:jmpoholarz@gmail.com">jmpoholarz@gmail.com</a> - Last updated -insert date-.</p>
+    </div>
+  </div>
+</footer>
+</html>

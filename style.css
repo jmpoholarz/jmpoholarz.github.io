@@ -1,0 +1,11 @@
+.nice {
+    font-family: sans-serif;
+}
+
+        p {
+            color: rgb(255, 0, 0);
+        }
+
+p.example {
+    color: green;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Basic Page Needs
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta charset="utf-8">
+<title>Telegram Hello Bot</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Mobile Specific Metas
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- FONT
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+<!-- CSS
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="stylesheet" href="../Skeleton-2.0.4/css/normalize.css">
+<link rel="stylesheet" href="../Skeleton-2.0.4/css/skeleton.css">
+<link rel="stylesheet" href="../Skeleton-2.0.4/css/navbar.css">
+
+<!-- Favicon
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+<body style="background: wheat;"> <!-- making bg white for editing -->
+
+</head>
+<body>
+
+  <style>
+    .centered {
+      text-align: center;
+    }
+
+    .link-flexbox {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    .link-flexbox h5 {
+      flex-basis: 0;
+      flex-grow: 1;
+      display: inline;
+      margin: 8px 2px 8px 2px;
+      min-width: 220px;
+    }
+
+    .separator {
+      flex-grow: 100;
+    }
+
+  </style>
+  
+
+
+  <div class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <div class="navbar-section"><div class="navbar-title">Jonathan Poholarz</div></div>
+        <div class="navbar-separator"></div>
+        <div class="navbar-section">
+          <div class="navbar-link"><a href="../home.html">Home</a></div>
+          <div class="navbar-link"><a href="../experience.html">Experience</a></div>
+          <div class="navbar-link"><a href="../portfolio.html">Portfolio</a></div>
+          <div class="navbar-link"><a href="../Skeleton-2.0.4/images/Resume/CS Resume 190629.pdf">Resume</a></div>
+          
+          <div class="navbar-link icons">
+            <div style="display: inline;">
+              <a href="https://github.com/jmpoholarz">
+                <img src="../Skeleton-2.0.4/images/icons/github_white_256.png" alt="Github" width="48
+                "></a>
+            </div>
+            <div style="display: inline;">
+              <a href="https://www.linkedin.com/in/jonathan-poholarz-427b7686/">
+                <img src="../Skeleton-2.0.4/images/icons/linkedin_white.png" alt="LinkedIn" width="48"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <img src="../Skeleton-2.0.4/images/Projects/helloBot75per.png" 
+      style="margin-left: auto; margin-right: auto; display: block; max-width: 100%; 
+      margin-bottom: 16px; box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.5);">
+      
+      <h2 class="centered">Telegram Hello Bot</h2>
+      <h4 class="centered">Fall 2020</h4>
+      <div class="link-flexbox centered">
+        <h5><a href="https://github.com/jmpoholarz/HiStickerBot">See it on Github</a></h5>
+      </div>
+
+      <p>Telegram is a messaging platform with two wonderful features: stickers and bots.  After one of my friends created a bot that would yell at some of the other users in the group as a joke, I decided that we needed more positivity in the chat!  And with such Hello Bot was born.</p>
+      <p>The chat bot uses the Telegram API to read incoming chat messages and parse which users sent them to a group chat.  With this information, it does some calculations and random number generation to determine if it should respond to the user with a hello message and accompanying sticker!  Some basic logic is in place to make sure it doesn't spam too many hello messages, but it would definitiely need some tuning for larger groups.</p>
+      <p>The bot is hosted on Heroku which spins up a host box whenever messages are sent to the chat.  This saves resources when the chat is inactive.  Though, Heroku does not save files directly, so information about how many messages the users have sent are stored in a Heroku Postgres database.  This information is loaded and updated via SQL queries.</p>
+      <p>Overall, just a small silly project in python but still fun to play around with as well as practice a little bit of database design and management.</p>
+    </div>
+  </div>
+
+  
+  
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+<footer>
+  <div class="container">
+    <div class="row">
+      <p>©2021 by Jonathan Poholarz - Contact me at <a href="mailto:jmpoholarz@gmail.com">jmpoholarz@gmail.com</a> - Last updated -insert date-.</p>
+    </div>
+  </div>
+</footer>
+</html>

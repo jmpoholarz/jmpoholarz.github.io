@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Basic Page Needs
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta charset="utf-8">
+<title>Sphere Approximations</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Mobile Specific Metas
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- FONT
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+<!-- CSS
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="stylesheet" href="../Skeleton-2.0.4/css/normalize.css">
+<link rel="stylesheet" href="../Skeleton-2.0.4/css/skeleton.css">
+<link rel="stylesheet" href="../Skeleton-2.0.4/css/navbar.css">
+
+<!-- Favicon
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+<body style="background: wheat;"> <!-- making bg white for editing -->
+
+</head>
+<body>
+
+  <style>
+    .centered {
+      text-align: center;
+    }
+
+    .link-flexbox {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    .link-flexbox h5 {
+      flex-basis: 0;
+      flex-grow: 1;
+      display: inline;
+      margin: 8px 2px 8px 2px;
+      min-width: 220px;
+    }
+
+    .separator {
+      flex-grow: 100;
+    }
+
+  </style>
+  
+
+
+  <div class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <div class="navbar-section"><div class="navbar-title">Jonathan Poholarz</div></div>
+        <div class="navbar-separator"></div>
+        <div class="navbar-section">
+          <div class="navbar-link"><a href="../home.html">Home</a></div>
+          <div class="navbar-link"><a href="../experience.html">Experience</a></div>
+          <div class="navbar-link"><a href="../portfolio.html">Portfolio</a></div>
+          <div class="navbar-link"><a href="../Skeleton-2.0.4/images/Resume/CS Resume 190629.pdf">Resume</a></div>
+          
+          <div class="navbar-link icons">
+            <div style="display: inline;">
+              <a href="https://github.com/jmpoholarz">
+                <img src="../Skeleton-2.0.4/images/icons/github_white_256.png" alt="Github" width="48
+                "></a>
+            </div>
+            <div style="display: inline;">
+              <a href="https://www.linkedin.com/in/jonathan-poholarz-427b7686/">
+                <img src="../Skeleton-2.0.4/images/icons/linkedin_white.png" alt="LinkedIn" width="48"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <img src="../Skeleton-2.0.4/images/Projects/PolyhedronWipG.gif" style="margin-left: auto; margin-right: auto; display: block; max-width: 100%; margin-bottom: 16px;">
+      
+      <h2 class="centered">Spherical Approximations</h2>
+      <h4 class="centered">Spring 2020</h4>
+
+      <p>Many strategy games take place on a gridded map, and, often, these maps are intended to represent some sort of world.  Of course, as map makers have struggled to do for centuries, representing a globe on a flat map is never perfect.</p>
+      <p>With this in mind, I wanted to experiment with possible ways to instead represent a 2D map as a sphere.  In the context of a strategy games, this makes the poles of a map more relevant and accurately sized, not stretched to unreasonable proportions like the well known Mercator projection.</p>
+      <p>I've experimented with a couple different approaches to tiling a sphere.  The goal is to cover its surface with regular tiles of roughly the same size.  The first attempt begins with a cube where each of a cube's eight points are located on a unit sphere.  Then, each square face of the cube is divided into 4 smaller squares and each point displaced to lie on the unit sphere.  This process can be repeated as many times as desired until enough tiles have been created.</p>
+      <img src="../Skeleton-2.0.4/images/Projects/SphereCubeA.gif" style="margin-left: auto; margin-right: auto; display: block; max-width: 100%; margin-bottom: 16px;">
+      <p>Although pretty easy, some of the tiles in this method do sort of lose their square shape.  Additionally, square tiles do suffer from other strategic disadvantages, namely the fact that diagonal movement either moves someone sqrt(2) units in one move or isn't allowed, requiring instead units of movement to go sqrt(2) distance.</p>
+      <p>This is where hexagonal grids typically come into play, having equidistant movement in all directions.  However, there is no regular geometric solid that can be created with only hexagons.  Instead, I experimented with just triangles, since a hexagon is in fact made of 6 triangles.</p>
+      <p>Starting with an icosahedron (one of those D20 dice for reference), I can apply a similar subdivision strategy as I did with the cube.  I start with a 20 sided die of triangles where each point is close to the unit sphere.  Then each triangular side is divided into 4 smaller triangles and the points of those triangles adjusted to lie on the desired sphere.  Then, of course, this can be repeated many times.</p>
+      <br>
+      <p>While this has been a rather rough first attempt and exploration of the idea of working with a sphere, it has been a good learning experience with the algorithms and some of the basics of the Godot Engine's 3D capabilities.  There are definitely things that can be optimized and done better than I'm doing them of course, as my framerate will quickly drop after about 4 subdivisions (5120 triangles).</p>
+      <p>I would also like to explore working with shaders to color the tiles so that the globe looks more like a planet rather than rainbow colored shapes, but that will come in a future project.</p>
+    </div>
+  </div>
+
+  
+  
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+<footer>
+  <div class="container">
+    <div class="row">
+      <p>©2021 by Jonathan Poholarz - Contact me at <a href="mailto:jmpoholarz@gmail.com">jmpoholarz@gmail.com</a> - Last updated -insert date-.</p>
+    </div>
+  </div>
+</footer>
+</html>
