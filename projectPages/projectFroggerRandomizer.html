@@ -5,7 +5,7 @@
 <!-- Basic Page Needs
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <meta charset="utf-8">
-<title>Memedemic</title>
+<title>Frogger: He's Back Randomizer</title>
 <meta name="description" content="">
 <meta name="author" content="">
 
@@ -93,18 +93,22 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <img src="../Skeleton-2.0.4/images/Projects/Memedemic 3.png" 
+      <img src="../Skeleton-2.0.4/images/Projects/HBRandoDev1e.gif" 
       style="margin-left: auto; margin-right: auto; display: block; max-width: 100%; 
       margin-bottom: 16px; box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.5);">
       
-      <h2 class="centered">Memedemic</h2>
-      <h4 class="centered">Fall 2017</h4>
+      <h2 class="centered">Frogger: He's Back Randomizer</h2>
+      <h4 class="centered">Fall 2020, Summer 2021</h4>
       <div class="link-flexbox centered">
-        <h5><a href="https://github.com/jmpoholarz/memedemic">Check it out on Github</a></h5>
+        <h5><a href="https://github.com/jmpoholarz/HesBackRandomizer/releases">Latest Release</a></h5>
+        <h5><a href="https://github.com/jmpoholarz/HesBackRandomizer">Github Source Code</a></h5>
+
       </div>
-      <p>Memedemic is a multiplayer cooperative console game based on the board game Pandemic.  My team developed this game as our project for my Software Engineering II class - Software Testing.  The game was developed entirely in C++ and functions on Windows and Linux operating systems primarily and with most features working on Mac.  We chose this project due to its depth and complexity of inter-operating features which would provide depth for our manual and automated test cases.</p>
-      <p>In Memedemic, players work together to prevent the spread of 'bad memes' throughout the internet by 'banning' their presence from various websites including Facebook, Youtube, Instagram, and Reddit.  As the game proceeds, players obtain cards representing different websites which may be researched to develop specific 'meme filters'.  However, if the memes overrun the players, they may lose the game before being able to regain control of the Internet.</p>
-      <p>Personally, I spent a significant portion of my time working on the command parsing as well as the menus which players interact with.  My teammates worked on many of the underlying structures which represent the locations on the board, the cards players obtain, and the effects created by those cards on the game.</p>
+      <p><i>Frogger: He's Back</i> was a sequal to the arcade game <i>Frogger</i> and released in 1997 for the PC and PlayStation 1.  As a child growing up, it was one of my favorite video games we had for our computer.  In the game, you play as the frog Frogger and need to rescue the 5 color-coded baby frogs in each level.</p>
+      <p>Being a fan of the game, I thought it would be fun to replay the levels I had long since memorized by moving the start locations and baby frog locations in each level.  To keep things from being too random, I pre-selected a list of resonable locations on each of the level maps and recorded them for the randomizer to select from.  Then based on the random input seed, the selections are chosen, the maps updated, and the executable re-packaged with the new locations.</p>
+      <p>This builds highly upon the level editing tool <a href="https://github.com/Kneesnap/FrogLord">Froglord</a> created by Kneesnap of the <a href="https://highwayfrogs.freeforums.net/">Highway Frogs</a> community which provides a Java API to unpack the executable and provide access to the internal game data in a much-more-friendly-than-binary-code format as well as a custom level editor.  Though, I don't make the most use of the level editor as the randomizer does everything from a set of scripts I wrote to update the game data.</p>
+      <p>I also built a simple GUI application using the Godot game engine which is used to select the files and options for randomization.</p>
+      <p>The initial version of the randomizer randomized only the start and goal locations.  The second version also updates the tile graphics of the target tiles which are drawn under the frogs in addition to randomizes the car, turtle, and log arrangements of the Retro Zone levels.</p>
     </div>
   </div>
 
